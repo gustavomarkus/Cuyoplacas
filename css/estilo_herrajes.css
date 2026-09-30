@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+#main_content {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto; /* centrar horizontalmente una caja */
+    background: #f2f3f8;
+    padding: 15px;
+}
+.clear{
+    clear: both;
+}
+.logo{
+    float: left;
+    padding: 15px 0px 15px 15px;
+}
+
+.container_menu{
+    float: right;
+    font-size: 20px;
+    color: #999;
+}
+.catalogo{
+    float: right;
+    font-size: 20px;
+    color: #999;
+    padding-top: 20px;
+    padding-right: 25px;
+}
+#menu_top{
+    z-index: 999;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 20px;
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: fixed;/* Hacemos que la cabecera tenga una posici�n fija */
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #999;
+}
+p{
+    font-size: 18px;
+    color: #999;
+    padding: 5px;
+    margin: 5px;
+}
+.container_menu img{
+    vertical-align: middle;
+}
+.catalogo a img{
+    vertical-align: middle;
+}
+.banner{
+    background: white;
+    max-width: 1100px;
+    margin: 20px auto;
+    /*box-shadow: 0 0 10px rgba(0,0,0,.1) ESTO ES UNA SOMBRA EN EL CONTENT*/;
+}
+/*css del banner*/
+.slider-wrapper{
+    position: relative;
+}
+.nivo-controlNav{
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    z-index: 997;
+}
+/*estilo content*/
+#content{
+    background: #f2f3f8;
+}
+.folleto{
+    text-align: center;
+    margin-top: 90px;
+}
+.aporte{
+    text-align: center;
+}
+
+h1{
+    font-size: 35px;
+    font-style: italic;
+}
+h2{
+    font-size: 25px;
+    font-style: italic;
+}
+hr{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(0,68,148);
+}
+#secciones{
+    text-align: center;
+    /*margin-top: 40px;*/
+    /*margin-bottom: 40px;*/
+}
+.box-img {
+    /*border: 3px solid #DADADA;*/
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    /* padding-right: 10px; */
+}
+.box-img img {
+    width: 250px;
+}
+.box-img a{
+    display: block; /* obliga al enlace, que es un elemento inline, a cambiar a bloque*/
+    /* height: 250px; */
+}
+.box-hover{
+    background: rgba(0,0,0,.5);/*color de la transparencia*/
+    width: 250px;
+    height: 340px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.box-text {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(0,150px);/*transformación del texto*/
+}
+
+.box-text h2{
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    /*border-top: 2px solid goldenrod; COLOR DE LA LÍNEA*/
+    display: inline;
+}
+.box-img a:hover .box-text {
+    -webkit-transform: translate(0,55px); /*transición del eje X primero, luego eje Y*/
+    -moz-transition: .8s;
+    -webkit-transition: .8s; /*segundos que dura la animación*/
+}
+.box-img a:hover .box-hover {
+    opacity: 1;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+}
+.box-img:hover {
+    /*border: 3px solid rgb(0,48,168); color del recuadro*/
+    -moz-transition: .8s;
+    -webkit-transition: .8s;
+}
+/*estilos publicidad*/
+#box-publiicidad{
+    vertical-align: middle;
+}
+.box-1{
+    display: inline-block;
+    background: #ddd;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    /* margin-right: 10px; */
+    padding-bottom: 20px;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    margin-left: 10px;
+}
+.box_enlace img {
+    padding: 15px;
+    width: 70%;
+    display: inline-block;
+}
+.box_enlace{
+    background: rgb(255,255,255);
+}
+/*estilo footer*/
+ul,li {
+    list-style-type:none;
+    color: #565656;
+    font-size: 12px;
+}
+#footer {
+    background: #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+#footer .menu-pie {
+    vertical-align:top;
+    display:inline-block;
+    width: 14%;	
+    padding: 10px;
+}
+.menu-pie li {
+
+}
+.menu-pie h3 {
+    color: #565656;
+    margin-bottom:10px;
+    font-size: 12px;
+}
+.menu-pie a{
+    color: #565656;
+    font-size: 12px;
+}
+h3{
+    border-bottom: 2px solid #565656 ;
+}
+/*estilos del menu-------*/
+.menu{
+    position: fixed;/*posición del menu desplegado*/
+    /*transition: all 2s;*/
+    top: 30%; 
+    left: 40%; 
+    /*transform: translate(-50%, -50%);*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 280px;
+}
+.menu a{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    color: rgb(0,48,168);
+    line-height: 45px;
+}
+.menu a:before{
+    content: '';
+    /*width: 20px;*/
+    /*height: 3px;*/
+    position: absolute;
+    /*top: 45px;*/
+    /*left: 50%;*/
+    /*background: #999;color de la línea del menú*/
+    /*transition: all 300ms;transición de la línea*/
+}
+.menu a:hover{
+    font-weight: bold;
+    background: white;
+    padding: 5px;
+}
+.menu a:hover:before{
+    width: 100%;
+    left: 0;
+
+}
+.icon-close{
+    position: relative;
+    top:15px;
+    right: -305px;
+}
+.icon-close {/*oculta el menu de la pag. principal*/
+    display: none;
+}
+.container_menu{
+    padding: 20px 10px 0px 15px;
+}
+/*estilos del menu desplegable*/
+.menu li ul {
+    display: none;
+}
+.menu li:hover ul { /* cuando hago hover en li me muestra el submenu */
+    display:block;
+}
+.menu ul ul { /* ponemos posicion absoluta par que pueda mostrarse debajo del elemento; */
+    position:relative;
+    z-index:10;
+}
+.menu li li {
+    display:block;
+    min-width:100px;
+}
+.menu li.active a {
+    background:#2773AE;
+    color:#FFFFFF;
+}
+.menu ul li ul li a{
+    font-size: 16px;
+    padding: 5px;
+}
+
+/**/
+.seccion{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.box-folletos {
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    margin: 10px;
+    border: 2px solid #b7b7b7;
+}
+.img_folleto img {
+    width: 85px;
+}
+.text_folleto {
+    background: #b7b7b7;
+    color: #fff;
+}
+#main_content .text_folleto h2{
+    font-size: 18px;
+    color: #fff;
+    padding: 5px;
+}
+/*estilo zoom*/
+img.zoom {
+    width: 85px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+}
+
+
+
+
